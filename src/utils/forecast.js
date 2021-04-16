@@ -9,7 +9,7 @@ const forecast = (lon, lat, callback) => {
             callback('Unable to find location', undefined);
         } else {
             const curr = body.current;
-            callback(undefined, curr.weather_descriptions[0] + '. It is currently ' + curr.temperature + ' degrees out. It feels like ' + curr.feelslike + ' degrees out.')
+            callback(undefined, curr.weather_descriptions[0] + '. It is currently ' + curr.temperature + ' degrees out. It feels like ' + curr.feelslike + ' degrees out. Humidity is ' + curr.humidity + '%.');
         }
     });
 };
